@@ -1,7 +1,7 @@
-const express = require("express")
+const express = require("express");
 const app = express();
-const itemsRoutes = require("./routes/items")
-const ExpressError = require("./expressError")
+const itemsRoutes = require("./routes/items");
+const ExpressError = require("./expressError");
 
 app.use(express.json());
 app.use("/items", itemsRoutes);
@@ -22,4 +22,4 @@ app.use((err, req, res, next) => {
   });
 });
 
-module.exports = app
+module.exports = app;
